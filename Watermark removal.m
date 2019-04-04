@@ -1,14 +1,14 @@
 file_path =  'D:\lmyst\Documents\Matlab\Project\test1\';
-%ĞèÒª¶ÁÈ¡µÄÎÄ¼ş¼ĞÂ·¾¶
+%éœ€è¦è¯»å–çš„æ–‡ä»¶å¤¹è·¯å¾„
 img_path_list = dir(strcat(file_path,'*.png'));
 img_num = length(img_path_list);
 if img_num > 0
     for j = 1:img_num
         img =  imread(strcat(int2str(j),'.png'),'png');  
-        filename = strcat('Ö¤È¯ÊĞ³¡»ù±¾·¨ÂÉ·¨¹æ',num2str(j), '.png ' );
+        filename = strcat('è¯åˆ¸å¸‚åœºåŸºæœ¬æ³•å¾‹æ³•è§„',num2str(j), '.png ' );
     img = im2bw(img, 220/255); %#ok<IM2BW>
-        imwrite(img, strcat('D:\lmyst\Documents\Matlab\Project\Ö¤È¯\', filename));
-        %D:\lmyst\Documents\Matlab\Project\Ö¤È¯\ ÊÇ´¦ÀíºÃµÄÍ¼Æ¬·ÅÖÃµÄÎÄ¼ş¼ĞÂ·¾¶
-        disp(strcat('È¥Ë®Ó¡Íê³É£ºµÚ', num2str(j), 'ÕÅ'));
+        imwrite(img, strcat('D:\lmyst\Documents\Matlab\Project\è¯åˆ¸\', filename));
+        %D:\lmyst\Documents\Matlab\Project\è¯åˆ¸\  è¿™ä¸ªæ˜¯å¤„ç†å¥½çš„å›¾ç‰‡æ”¾ç½®çš„æ–‡ä»¶å¤¹è·¯å¾„
+        disp(strcat('å»æ°´å°å®Œæˆï¼šç¬¬', num2str(j), 'å¼ '));
     end
 end
